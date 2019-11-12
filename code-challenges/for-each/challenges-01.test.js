@@ -64,9 +64,10 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-    arr.forEach((arr,callback) => {
-        
-    })
+    arr.forEach(element => {
+        callback(element, arr);
+    });
+    return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,7 +78,10 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-    // Solution code here...
+    arr.forEach(element => {
+        removeOne(element, arr)
+    });
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,7 +99,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-    // Solution code here...
+    let acceptedGroceryItem = [];
+    availableItems.forEach(element => {
+        if (element.available){
+            acceptedGroceryItem.push(element.name)
+        }
+    });
+    return acceptedGroceryItem;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -110,7 +120,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-    // Solution code here...
+    let finalArr = [];
+    arr.forEach(element => {
+        if (element % 3 === 0 && element % 5 === 0) {
+            finalArr.push('Fizz Buzz');
+        } else if (element % 3 === 0 ) {
+            finalArr.push('Fizz')
+        } else if (element % 5 === 0 ) {
+            finalArr.push('Buzz')
+        } else {
+            finalArr.push(element)
+        }
+    });
+    return finalArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
