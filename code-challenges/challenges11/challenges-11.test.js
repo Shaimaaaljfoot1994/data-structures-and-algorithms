@@ -9,8 +9,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  // Solution code here...
-};
+    let shaimaa = /^[0-9]{4}$/
+    return shaimaa.test(pin) ? true : false;};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
