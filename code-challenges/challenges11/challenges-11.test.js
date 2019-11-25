@@ -9,7 +9,7 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-    let shaimaa = /^[0-9]{4}$/
+    let shaimaa= /^[0-9]{4}$/
     return shaimaa.test(pin) ? true : false;};
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,11 +27,10 @@ Return either true or false.
 
 Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
 ------------------------------------------------------------------------------------------------ */
-
 const validateEmail = (email) => {
-    var shaimaa =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return shaimaa.test(email) ? true :false;};
-
+var shaimaa =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  return shaimaa.test(email) ? true :false;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -54,8 +53,8 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
-};
+    let shaimaa = /^((\d{3})|(\(\d{3}\)))[ -]?\d{3}[ -]?\d{4}$/;
+    return shaimaa.test(phoneNumber);};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4 - Stretch Goal
