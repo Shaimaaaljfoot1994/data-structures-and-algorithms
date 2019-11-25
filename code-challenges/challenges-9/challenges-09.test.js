@@ -71,7 +71,14 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+
+  let shaimaa= arr.reduce((acc, val)=>{
+    acc.push(val.name);
+    return acc;
+  },[]);
+  return shaimaa;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
