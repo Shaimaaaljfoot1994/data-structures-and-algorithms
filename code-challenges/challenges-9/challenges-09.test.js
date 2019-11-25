@@ -150,7 +150,18 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
-};
+    let number = arr.reduce((acc, val) => {
+  
+      if (val.child){
+        return acc + val.child.length;
+      }
+      else {
+        return acc;
+      }
+  
+    }, 0);
+    return number;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
