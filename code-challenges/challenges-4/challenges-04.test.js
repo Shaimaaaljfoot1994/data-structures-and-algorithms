@@ -65,6 +65,8 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+  const shaimaa = /^[Oo]ct(ober)?$/; 
+ return shaimaa.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
