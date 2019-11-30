@@ -122,6 +122,9 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
 // Solution code here...
+
+let shaimaa = /^https:\/\//;
+return shaimaa.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
