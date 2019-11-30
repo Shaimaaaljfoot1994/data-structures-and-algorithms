@@ -62,6 +62,11 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  let Shaimaa = arr.filter(s => {
+    return s.includes(':)')
+  })
+  return Shaimaa.length === arr.length ? true : false;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
