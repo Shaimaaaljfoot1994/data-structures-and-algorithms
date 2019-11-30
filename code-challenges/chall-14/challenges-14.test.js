@@ -106,6 +106,24 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
+  return arr.sort( function(a, b){
+    if(type(arr[0][property]) === 'number'){
+      return a[property] - b[property];
+    }
+
+    if(type(arr[0][property]) === 'string'){
+
+      var propertyA = a[property].toUpperCase();
+      var propertyB = b[property].toUpperCase();
+      if (propertyA < propertyB) {
+        return -1;
+      }
+      if (propertyA > propertyB) {
+        return 1;
+      }
+      return 0;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
