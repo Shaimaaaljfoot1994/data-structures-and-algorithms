@@ -93,7 +93,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-
+  let shaimaa= false;
+  arr.forEach(element =>
+      {
+          const values = Object.values(element);
+         if (values[0]=== character && values[2].length > 0 )
+         shaimaa= true ;
+      });
+      return shaimaa;
 };
 
 /* ------------------------------------------------------------------------------------------------
